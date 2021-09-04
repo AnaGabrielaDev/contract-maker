@@ -1,0 +1,16 @@
+body{
+    background-color: pink;
+    font-family: fantasy 15px;
+}
+ 
+#novaData {
+    display: none;
+}
+
+footer{
+    text-align: end;
+}
+
+.showFiador {
+    display: none;
+}

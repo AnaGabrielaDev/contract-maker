@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src="js/main.js"></script>
   <script src="js/pdfmake.min.js"></script>
   <script src="js/vfs_fonts.js"></script>
-  <script src="js/main.js"></script>
   <title>Formulário</title>
 
 </head>
 
 <body>
+  <h1>Gerador de Contrato de Aluguel </h1>
   <!--Contrato-->
   <section>
     <h2>Sobre o contrato</h2>
@@ -35,15 +37,17 @@
     <input type="text" name="docLocal" id="docLocal">
     <p id="demo"></p>
 
-    <div id="data">
-      <label for="data">Data Criação: </label>
-      <input type="radio" name="docdata" id="dataAtual" value="Hoje" checked onclick="otherday()">
-      <label for="Hoje">Today</label>
-      <p id="demo"></p>
-    </div>
-    <div>
-      <input type="radio" name="docdata" id="outraData" value="outraData" onclick="otherday()">
-      <label for="outraData">Usar Outra Data</label>
+
+    <div class="data">
+      <div class="dataAtuall">
+        <label for="Hoje" class = "radio">Usar data atual</label>
+        <input type="radio" name="docdata" id="dataAtual"  value="Hoje" checked onclick="otherday()">
+        <p id="demo"></p>
+      </div>
+      <div class="dataAtuall">
+        <label for="outraData" class = "radio">Usar Outra Data</label>
+        <input type="radio" name="docdata" id="outraData"  value="outraData" onclick="otherday()">
+      </div>
     </div>
     <div id='novaData'>
       <input type="date" name="txtNovaData" id="txtNovaData">
@@ -58,13 +62,13 @@
       <input type="text" name="nameLocador" id="nameLocador"><br>
 
       <label for="rgLocador"> Rg do Locador: </l abel>
-        <input type="text" name="rgLocador" id="rgLocador"><br>
+        <input type="text" name="rgLocador" id="rgLocador" class="inputs"><br>
 
         <label for="cpfLocador">Cpf do Locador: </label>
-        <input type="text" name="cpfLocador" id="cpfLocador"><br>
+        <input type="text" name="cpfLocador" id="cpfLocador" class="inputs"><br>
 
         <label for="nacionalidadeLocador">Nacionalidade: </label>
-        <input type="text" name="nacionalidadeLocador" id="nacionalidadeLocador"><br>
+        <input type="text" name="nacionalidadeLocador" id="nacionalidadeLocador" class="inputs"><br>
 
         <label for="estadocivilLocador">Qual é o estado civil?</label>
         <select name="estadocivilLocador" id="estadocivilLocador">
@@ -109,7 +113,7 @@
       <input type="text" name="residenciaLocatario" id="residenciaLocatario"><br>
 
       <label for="rendaLocador">Anexe aqui a comprovação de renda, caso queira</label>
-      <input type="file" name="rendaLocador" id="rendaLocador">
+      <input type="file" name="rendaLocador" id="rendaLocador" class="files">
     </div>
   </section>
 
@@ -160,6 +164,8 @@
     <label for="valorLocacao">Quanto será a mensalidade do Aluguel?</label>
     <input type="number" name="valorLocacao" id="valorLocacao">
   </section>
+
+  <input type="button" value="Gerar o Contrato" onclick="generatePdf()">
 
   <footer>
     <a href="https://github.com/AnaGabrielaDev" target="_blank" rel="noopener noreferrer">AnaGabrielaDev</a>

@@ -21,8 +21,12 @@ function otherday(){
 }
 
 function fiador (){
-  document.getElementById("garantiaOpcoes").options[2].selected === true;
-  document.querySelector('.showFiador').style.display = 'block';
+  var checkFiadorSelected = document.getElementById("garantiaOpcoes").options[2].selected === true; // isso retorna um boolean (true ou false)
+
+  if(checkFiadorSelected)
+    document.querySelector('.showFiador').style.display = 'block';
+  else
+    document.querySelector('.showFiador').style.display = 'none';
 }
 
 //pdf

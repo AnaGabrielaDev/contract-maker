@@ -1,16 +1,41 @@
 body{
-    background-color: pink;
+    background-color: rgb(223, 198, 219);
     font-family: fantasy 15px;
+    border-radius: 10px;
+    padding: 120px;
+    width: 800px;
+    margin: auto;
+    box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.438);
 }
- 
 #novaData {
     display: none;
+}
+.showFiador {
+    display: none;
+}
+h1, h2 {
+    font-family: "Sofia", sans-serif;
+    text-align: center;
+}
+label {
+    text-align: left;
+}
+select {
+    border-radius: 200px;
+}
+.radio{
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+input {
+    width: 800px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 55px;
 }
 
 footer{
     text-align: end;
-}
-
-.showFiador {
-    display: none;
 }

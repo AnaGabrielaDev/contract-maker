@@ -25,32 +25,23 @@
       <option value="seguroFiança">Seguro Fiança</option>
       <option value="fiador">Fiador</option>
     </select>
-
     <br>
-
     <label for="docValidade">Até quando será valido? </label>
-    <input type="date" name="docValidade" id="docValidade">
+    <input type="date" name="docValidade" id="docValidade" class="inputs">
     
-    <br>
-
     <label for="docLocal">Onde é valido?</label>
-    <input type="text" name="docLocal" id="docLocal">
-    <p id="demo"></p>
+    <input type="text" name="docLocal" id="docLocal" class="inputs">
 
-
-    <div class="data">
-      <div class="dataAtuall">
-        <label for="Hoje" class = "radio">Usar data atual</label>
-        <input type="radio" name="docdata" id="dataAtual"  value="Hoje" checked onclick="otherday()">
+    <div>
+        <p>Qual é a data da criação do documento?</p>
+        <input type="radio" name="docdata" id="dataAtual"  value="Hoje" checked onclick="today()">
+        <label for="Hoje" class = "radio">Usar data atual (hoje)</label>
         <p id="demo"></p>
-      </div>
-      <div class="dataAtuall">
-        <label for="outraData" class = "radio">Usar Outra Data</label>
         <input type="radio" name="docdata" id="outraData"  value="outraData" onclick="otherday()">
-      </div>
+        <label for="outraData" class = "radio">Usar outra data</label>
     </div>
     <div id='novaData'>
-      <input type="date" name="txtNovaData" id="txtNovaData">
+      <input type="date" name="txtNovaData" id="txtNovaData" class="inputs">
     </div>
   </section>
 
@@ -59,18 +50,12 @@
     <div>
       <h2>Locador</h2>
       <label for="nameLocador"> Nome do Locador:</label>
-      <input type="text" name="nameLocador" id="nameLocador"><br>
+      <input type="text" name="nameLocador" id="nameLocador" class="inputs"><br>
 
-      <label for="rgLocador"> Rg do Locador: </l abel>
-        <input type="text" name="rgLocador" id="rgLocador" class="inputs"><br>
+      <label for="nacionalidadeLocador">Nacionalidade: </label>
+      <input type="text" name="nacionalidadeLocador" id="nacionalidadeLocador" class="inputs"><br>
 
-        <label for="cpfLocador">Cpf do Locador: </label>
-        <input type="text" name="cpfLocador" id="cpfLocador" class="inputs"><br>
-
-        <label for="nacionalidadeLocador">Nacionalidade: </label>
-        <input type="text" name="nacionalidadeLocador" id="nacionalidadeLocador" class="inputs"><br>
-
-        <label for="estadocivilLocador">Qual é o estado civil?</label>
+      <label for="estadocivilLocador">Qual é o estado civil?</label>
         <select name="estadocivilLocador" id="estadocivilLocador">
           <option value="solteiro">Solteiro(a)</option>
           <option value="casado">Casado(a)</option>
@@ -79,8 +64,17 @@
           <option value="divorciado">Divorciado(a)</option>
         </select><br>
 
-        <label for="residenciaLocador">Endereço do Locador: </label>
-        <input type="text" name="residenciaLocador" id="residenciaLocador"><br>
+      <label for="profissaoLocador">Profissao do Locador:</label>
+      <input type="text" name="profissaoLocador" id="profissaoLocador" class="inputs"><br>
+
+      <label for="rgLocador"> Rg do Locador: </l abel>
+      <input type="text" name="rgLocador" id="rgLocador" class="inputs"><br>
+
+      <label for="cpfLocador">Cpf do Locador: </label>
+      <input type="text" name="cpfLocador" id="cpfLocador" class="inputs"><br>
+
+      <label for="residenciaLocador">Endereço do Locador: </label>
+      <input type="text" name="residenciaLocador" id="residenciaLocador" class="inputs"><br>
     </div>
   </section>
   
@@ -89,31 +83,34 @@
     <div>
       <h2>Locatário </h2>
       <label for="nameLocatario"> Nome do Locatário:</label>
-      <input type="text" name="nameLocatario" id="nameLocatario"><br>
-
-      <label for="rgLocatario"> Rg do Locatario: </label>
-      <input type="text" name="rgLocatario" id="rgLocatario"><br>
-
-      <label for="cpfLocatario">CPF do Locatario: </label>
-      <input type="text" name="cpfLocatario" id="cpfLocatario"><br>
+      <input type="text" name="nameLocatario" id="nameLocatario" class="inputs"><br>
 
       <label for="nacionalidadeLocatario">Nacionalidade: </label>
-      <input type="text" name="nacionalidadeLocatario" id="nacionalidadeLocatario"><br>
-
+      <input type="text" name="nacionalidadeLocatario" id="nacionalidadeLocatario" class="inputs"><br>
+      
       <label for="estadocivilLocatario">Qual é o estado civil?</label>
-      <select name="estadocivilLocatario" id="estadocivilLocatario">
-        <option value="solteiro">Solteiro(a)</option>
-        <option value="casado">Casado(a)</option>
-        <option value="viuvo">Viuvo(a)</option>
-        <option value="separado">Separado(a)</option>
-        <option value="divorciado">Divorciado(a)</option>
-      </select><br>
+        <select name="estadocivilLocatario" id="estadocivilLocatario">
+          <option value="solteiro">Solteiro(a)</option>
+          <option value="casado">Casado(a)</option>
+          <option value="viuvo">Viuvo(a)</option>
+          <option value="separado">Separado(a)</option>
+          <option value="divorciado">Divorciado(a)</option>
+        </select><br>
+
+      <label for="profissaoLocatario">Profissao: </label>
+      <input type="text" name="profissaoLocatario" id="profissaoLocatario" class="inputs"><br>
+
+      <label for="rgLocatario"> Rg do Locatario: </label>
+      <input type="text" name="rgLocatario" id="rgLocatario" class="inputs"><br>
+
+      <label for="cpfLocatario">CPF do Locatario: </label>
+      <input type="text" name="cpfLocatario" id="cpfLocatario" class="inputs"><br>
 
       <label for="residenciaLocatario">Endereço do Locatario: </label>
-      <input type="text" name="residenciaLocatario" id="residenciaLocatario"><br>
+      <input type="text" name="residenciaLocatario" id="residenciaLocatario" class="inputs"><br>
 
       <label for="rendaLocador">Anexe aqui a comprovação de renda, caso queira</label>
-      <input type="file" name="rendaLocador" id="rendaLocador" class="files">
+      <input type="file" name="rendaLocador" id="rendaLocador" class="files" class="inputs">
     </div>
   </section>
 
@@ -122,30 +119,34 @@
     <div class="showFiador">
       <h2>Fiador</h2>
       <label for="nameFiador">Nome do Fiador:</label>
-      <input type="text" name="nameFiador" id="nameFiador"><br>
-      <label for="rgFiador"> Rg do Fiador: </l abel>
-      <input type="text" name="rgFiador" id="rgFiador"><br>
-
-      <label for="cpfFiador">CPF do Fiador: </label>
-      <input type="text" name="cpfFiador" id="cpfFiador"><br>
+      <input type="text" name="nameFiador" id="nameFiador" class="inputs"><br>
 
       <label for="nacionalidadeFiador">Nacionalidade: </label>
-      <input type="text" name="nacionalidadeFiador" id="nacionalidadeFiador"><br>
+      <input type="text" name="nacionalidadeFiador" id="nacionalidadeFiador" class="inputs"><br>
 
       <label for="estadocivilFiador">Qual é o estado civil?</label>
-      <select name="estadocivilFiador" id="estadocivilFiador">
-        <option value="solteiro">Solteiro(a)</option>
-        <option value="casado" onclick="conjuge()">Casado(a)</option>
-        <option value="viuvo">Viuvo(a)</option>
-        <option value="separado">Separado(a)</option>
-        <option value="divorciado">Divorciado(a)</option>
-      </select><br>
+        <select name="estadocivilFiador" id="estadocivilFiador">
+          <option value="solteiro">Solteiro(a)</option>
+          <option value="casado" onclick="conjuge()">Casado(a)</option>
+          <option value="viuvo">Viuvo(a)</option>
+          <option value="separado">Separado(a)</option>
+          <option value="divorciado">Divorciado(a)</option>
+        </select><br>
+
+      <label for="profissaoFiador">Profissao do Fiador: </label>
+      <input type="text" name="profissaoFiador" id="profissaoFiador" class="inputs">
+
+      <label for="rgFiador"> Rg do Fiador: </label>
+      <input type="text" name="rgFiador" id="rgFiador" class="inputs"><br>
+
+      <label for="cpfFiador">CPF do Fiador: </label>
+      <input type="text" name="cpfFiador" id="cpfFiador" class="inputs"><br>
 
       <label for="residenciaFiador">Endereço do Fiador: </label>
-      <input type="text" name="residenciaFiador" id="residenciaFiador"><br>
+      <input type="text" name="residenciaFiador" id="residenciaFiador" class="inputs"><br>
 
       <label for="rendaFiador">Anexe aqui a comprovação de renda, caso queira</label>
-      <input type="file" name="rendaFiador" id="rendaFiador">
+      <input type="file" name="rendaFiador" id="rendaFiador" class="inputs">
     </div>
   </section>
 
@@ -153,19 +154,35 @@
   <section>
     <h2>Sobre a Locação</h2>
     <label for="addressLocação">Endereço da Locação: </label>
-    <input type="text" name="addressLocacão" id="addressLocacão"><br>
+    <input type="text" name="addressLocacão" id="addressLocacão" class="inputs"><br>
 
     <label for="finsLocacao">Qual a destinação do Imóvel? </label>
-    <select name="finsLocacao" id="finsLocacao">
-      <option value="residencial">Residencial</option>
-      <option value="comercial">Comercial</option>
+    <select name="finsLocacao" id="finsLocacao" onChange="finsLocacao()">
+      <option value="RESIDENCIAL">Residencial</option>
+      <option value="COMERCIAL">Comercial</option>
     </select><br>
 
     <label for="valorLocacao">Quanto será a mensalidade do Aluguel?</label>
-    <input type="number" name="valorLocacao" id="valorLocacao">
+    <input type="number" name="valorLocacao" id="valorLocacao" class="inputs">
+
+    <label for="formaPagamento">Qual será a forma de pagamento?</label>
+      <select name="formaPagamento" id="formaPagamento">
+        <option value="Boleto">Boleto</option>
+        <option value="Transferência bancária">Transferência bancária</option>
+        <option value="Pix">Pix</option>
+        <option value="Cartão de crédito">Cartão de crédito</option>
+      </select><br>
+
+    <label for="indices">Qual Indice será utlizado para reajustes? </label>
+      <select name="indices" id="indices">
+        <option value="IGP-M">IGP-M</option>
+        <option value="IPCA">IPCA</option>
+        <option value="INPC">INPC</option>
+        <option value="IPC">IPC</option>
+      </select>
   </section>
 
-  <input type="button" value="Gerar o Contrato" onclick="generatePdf()">
+  <input type="button" value="Gerar o Contrato" onclick="generatePdf()" class="inputs">
 
   <footer>
     <a href="https://github.com/AnaGabrielaDev" target="_blank" rel="noopener noreferrer">AnaGabrielaDev</a>

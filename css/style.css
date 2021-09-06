@@ -28,7 +28,7 @@ select {
     padding-left: 25px;
     cursor: pointer;
 }
-input {
+.inputs {
     width: 800px;
     padding: 12px 20px;
     margin: 8px 0;

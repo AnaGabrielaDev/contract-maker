@@ -5,17 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="sets/css/style.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
   <script src="js/main.js"></script>
   <script src="js/pdfmake.min.js"></script>
   <script src="js/vfs_fonts.js"></script>
   <title>Formulário</title>
-
+  <link rel="shortcut icon" href="sets/imgs/2370G.ico"/>
 </head>
 
 <body>
-  <h1>Gerador de Contrato de Aluguel </h1>
+  <h1>Gerador de Contrato de Aluguel</h1>
   <!--Contrato-->
   <section>
     <h2>Sobre o contrato</h2>
@@ -24,8 +24,8 @@
       <option value="chequeCalcao">Cheque Calção</option>
       <option value="seguroFiança">Seguro Fiança</option>
       <option value="fiador">Fiador</option>
-    </select>
-    <br>
+    </select><br>
+    
     <label for="docValidade">Até quando será valido? </label>
     <input type="date" name="docValidade" id="docValidade" class="inputs">
     
@@ -36,7 +36,6 @@
         <p>Qual é a data da criação do documento?</p>
         <input type="radio" name="docdata" id="dataAtual"  value="Hoje" checked onclick="today()">
         <label for="Hoje" class = "radio">Usar data atual (hoje)</label>
-        <p id="demo"></p>
         <input type="radio" name="docdata" id="outraData"  value="outraData" onclick="otherday()">
         <label for="outraData" class = "radio">Usar outra data</label>
     </div>

@@ -35,7 +35,9 @@ function generatePdf() {
     var profissaoLocador = document.querySelector('#profissaoLocador').value;
     var rgLocador = document.querySelector('#rgLocador').value;
     var cpfLocador = document.querySelector('#cpfLocador').value;
-    var residenciaLocador = document.querySelector('#residenciaLocador').value;
+    var addressLocador = document.querySelector('#addressLocador').value;
+    var numAddressLocador = document.querySelector('#numAddressLocador').value;
+    var complementoAddressLocador = document.querySelector('#complementoAddressLocador').value;
 
   //locatario
     var nameLocatario = document.querySelector('#nameLocatario').value;
@@ -44,7 +46,13 @@ function generatePdf() {
     var profissaoLocatario = document.querySelector('#profissaoLocatario').value;
     var rgLocatario = document.querySelector('#rgLocatario').value;
     var cpfLocatario = document.querySelector('#cpfLocatario').value;
-    var residenciaLocatario = document.querySelector('#residenciaLocatario').value;
+    var addressLocatario = document.querySelector('#addressLocatario').value;
+    var numAddressLocatario = document.querySelector('#numAddressLocatario').value;
+    var complementoAddressLocatario = document.querySelector('#complementoAddressLocatario').value;
+    var neighborhoodLocatario = document.querySelector('#neighborhoodLocatario').value;
+    var cepLocatario = document.querySelector('#cepLocatario').value;
+    var cityLocatario = document.querySelector('#cityLocatario'),value;
+    var stateLocatario = document.querySelector('#stateLocatario').value;
   
   //locacao
     var finsLocacao = document.querySelector('#finsLocacao').value;
@@ -75,12 +83,12 @@ function generatePdf() {
         text: '\nLOCADOR:',
         style: 'subheader'
       },
-        `${nameLocador}, ${nacionalidadeLocador}, ${estadocivilLocador}, ${profissaoLocador}, portador da cédula de identidade R.G. nº ${rgLocador} e CPF nº ${cpfLocador}, residente e domiciliado à ${residenciaLocador}`,
+        `${nameLocador}, ${nacionalidadeLocador}, ${estadocivilLocador}, ${profissaoLocador}, portador da cédula de identidade R.G. nº ${rgLocador} e CPF nº ${cpfLocador}, residente e domiciliado à ${addressLocador}, ${numAddressLocador}, ${complementoAddressLocador}, ${neighborhoodLocatario}, ${cepLocatario}, ${cityLocatario}, ${stateLocatario}`,
       {
         text: '\nLOCATÁRIO:',
         style: 'subheader'
       }, 
-        `${nameLocatario}, ${nacionalidadeLocatario}, ${estadocivilLocatario}, ${profissaoLocatario}, portador da cédula de identidade R.G. nº ${rgLocatario} e CPF nº ${cpfLocatario}, residente e domiciliado à ${residenciaLocatario}`,
+        `${nameLocatario}, ${nacionalidadeLocatario}, ${estadocivilLocatario}, ${profissaoLocatario}, portador da cédula de identidade R.G. nº ${rgLocatario} e CPF nº ${cpfLocatario}, residente e domiciliado à ${addressLocatario}, ${numAddressLocatario}, ${complementoAddressLocatario}, ${neighborhoodLocatario}`,
       {
         //text: 'FIADOR',
         //style: 'subheader'

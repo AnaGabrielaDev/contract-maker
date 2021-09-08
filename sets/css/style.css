@@ -36,6 +36,21 @@ select {
     border-radius: 55px;
 }
 
+.nextTo {
+    display: flex;
+}
+.ladinho{
+    margin: 12px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 2px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    float:left
+  }
+
 footer{
     text-align: end;
 }

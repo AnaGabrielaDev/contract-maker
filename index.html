@@ -16,34 +16,6 @@
 
 <body>
   <h1>Gerador de Contrato de Aluguel</h1>
-  <!--Contrato-->
-  <section>
-    <h2>Sobre o contrato</h2>
-    <label for="garantiaOpcoes">Através de qual método será feita a garantia? </label>
-    <select id="garantiaOpcoes" onChange="fiador()">
-      <option value="chequeCalcao">Cheque Calção</option>
-      <option value="seguroFiança">Seguro Fiança</option>
-      <option value="fiador">Fiador</option>
-    </select><br>
-    
-    <label for="docValidade">Até quando será valido? </label>
-    <input type="date" name="docValidade" id="docValidade" class="inputs">
-    
-    <label for="docLocal">Onde é valido?</label>
-    <input type="text" name="docLocal" id="docLocal" class="inputs">
-
-    <div>
-        <p>Qual é a data da criação do documento?</p>
-        <input type="radio" name="docdata" id="dataAtual"  value="Hoje" checked onclick="today()">
-        <label for="Hoje" class = "radio">Usar data atual (hoje)</label>
-        <input type="radio" name="docdata" id="outraData"  value="outraData" onclick="otherday()">
-        <label for="outraData" class = "radio">Usar outra data</label>
-    </div>
-    <div id='novaData'>
-      <input type="date" name="txtNovaData" id="txtNovaData" class="inputs">
-    </div>
-  </section>
-
   <!--Locador-->
   <section>
     <div>
@@ -72,23 +44,44 @@
       <label for="cpfLocador">Cpf do Locador: </label>
       <input type="text" name="cpfLocador" id="cpfLocador" class="inputs"><br>
 
-      <label for="addressLocador">Endereço:</label>
-      <input type="text" name="addressLocador " id="addressLocador" class="inputs"><br>
+      <section>
+        <label for="addressLocador">Endereço:</label>
+        <input type="text" name="addressLocador" id="addressLocador" class="inputs"><br>
       
-      <div class="nextTo">
-        <label for="numAddressLocador">Numero:</label>
-        <input type="number" name="numAddressLocador" id="numAddressLocador" class="ladinho"><br>
+        <div class="nextTo">
+          <div class="nextTo-item">
+            <label for="numAddressLocador">Numero:</label>
+            <input type="number" name="numAddressLocador" id="numAddressLocador" class="nextTo-inputs">
+          </div>
 
-        <label for="complementoAddressLocador">Complemento:</label>
-        <input type="text" name="complementoAddressLocador" id="complementoAddressLocador" class="ladinho">
+          <div class="nextTo-item">
+            <label for="complementoAddressLocador">Complemento:</label>
+            <input type="text" name="complementoAddressLocador" id="complementoAddressLocador" class="nextTo-inputs">
+          </div>
 
-        <label for="neighborhoodLocador" class="ladinho">Bairro:</label>
-        <input type="text" name="neighborhoodLocador" id="neighborhoodLocador" class="ladinho">
-      </div>
-      <div class="nextTo">
-        <label for=""></label>
+          <div class="nextTo-item">
+            <label for="neighborhoodLocador">Bairro:</label>
+            <input type="text" name="neighborhoodLocador" id="neighborhoodLocador" class="nextTo-inputs">
+          </div>  
+        </div>
 
-      </div>
+        <div class="nextTo">
+          <div class="nextTo-item">
+            <label for="cepLocador">Cep:</label>
+            <input type="number" name="cepLocador" id="cepLocador" class="nextTo-inputs">
+          </div>
+
+          <div class="nextTo-item">
+            <label for="cityLocador">Cidade:</label>
+            <input type="text" name="cityLocador" id="cityLocador" class="nextTo-inputs">
+          </div>
+
+          <div class="nextTo-item">
+            <label for="stateLocador">Estado:</label>
+            <input type="text" name="stateLocador" id="stateLocador" class="nextTo-inputs">
+          </div>
+        </div>
+      </section>
     </div>
   </section>
   
@@ -119,30 +112,32 @@
 
       <label for="cpfLocatario">CPF do Locatario:</label>
       <input type="text" name="cpfLocatario" id="cpfLocatario" class="inputs"><br>
-      <label for="addressLocatario">Endereço do Locatario:</label>
-      <input type="text" name="addressLocatario" id="addressLocatario" class="inputs"><br>
 
-      <div class="nextTo">
-        <label for="numAddressLocatario" class="ladinho">Numero:</label>
-        <input type="number" name="numAddressLocatario" id="numAddressLocatario" class="ladinho">
+      <section>
+        <label for="addressLocatario">Endereço do Locatario:</label>
+        <input type="text" name="addressLocatario" id="addressLocatario" class="inputs"><br>
 
-        <label for="complementoAddressLocatario" class="ladinho">Complemento:</label>
-        <input type="text" name="complementoAddressLocatario" id="complementoAddressLocatario" class="ladinho">
+        <div class="nextTo">
+          <label for="numAddressLocatario" class="ladinho">Numero:</label>
+          <input type="number" name="numAddressLocatario" id="numAddressLocatario" class="ladinho">
 
-        <label for="neighborhoodLocatario" class="ladinho">Bairro: </label>
-        <input type="text" name="neighborhoodLocatario" id="neighborhoodLocatario" class="ladinho">
-      </div>
-      <div class="nextTo">
-        <label for="cepLocatario" class="ladinho">CEP:</label>
-        <input type="number" name="cepLocatario" id="cepLocatario" class="ladinho">
+          <label for="complementoAddressLocatario" class="ladinho">Complemento:</label>
+          <input type="text" name="complementoAddressLocatario" id="complementoAddressLocatario" class="ladinho">
 
-        <label for="cityLocatario" class="ladinho">Cidade:</label>
-        <input type="text" name="cityLocatario" id="cityLocatario" class="ladinho">
+          <label for="neighborhoodLocatario" class="ladinho">Bairro: </label>
+          <input type="text" name="neighborhoodLocatario" id="neighborhoodLocatario" class="ladinho">
+        </div>
+        <div class="nextTo">
+          <label for="cepLocatario" class="ladinho">CEP:</label>
+          <input type="number" name="cepLocatario" id="cepLocatario" class="ladinho">
 
-        <label for="stateLocatario" class="ladinho">Estado:</label>
-        <input type="text" name="stateLocatario" id="stateLocatario" class="ladinho">
-      </div>
+          <label for="cityLocatario" class="ladinho">Cidade:</label>
+          <input type="text" name="cityLocatario" id="cityLocatario" class="ladinho">
 
+          <label for="stateLocatario" class="ladinho">Estado:</label>
+          <input type="text" name="stateLocatario" id="stateLocatario" class="ladinho">
+        </div>
+      </section>
       <label for="rendaLocador">Anexe aqui a comprovação de renda, caso queira</label>
       <input type="file" name="rendaLocador" id="rendaLocador" class="files" class="inputs">
     </div>
@@ -155,7 +150,7 @@
       <label for="nameFiador">Nome do Fiador:</label>
       <input type="text" name="nameFiador" id="nameFiador" class="inputs"><br>
 
-      <label for="nacionalidadeFiador">Nacionalidade: </label>
+      <label for="nacionalidadeFiador">Nacionalidade:</label>
       <input type="text" name="nacionalidadeFiador" id="nacionalidadeFiador" class="inputs"><br>
 
       <label for="estadocivilFiador">Qual é o estado civil?</label>
@@ -167,23 +162,69 @@
           <option value="divorciado">Divorciado(a)</option>
         </select><br>
 
-      <label for="profissaoFiador">Profissao do Fiador: </label>
+      <label for="profissaoFiador">Profissao do Fiador:</label>
       <input type="text" name="profissaoFiador" id="profissaoFiador" class="inputs">
 
-      <label for="rgFiador"> Rg do Fiador: </label>
+      <label for="rgFiador"> Rg do Fiador:</label>
       <input type="text" name="rgFiador" id="rgFiador" class="inputs"><br>
 
-      <label for="cpfFiador">CPF do Fiador: </label>
+      <label for="cpfFiador">CPF do Fiador:</label>
       <input type="text" name="cpfFiador" id="cpfFiador" class="inputs"><br>
+      <section>
+        <label for="addressFiador">Endereço do Fiador:</label>
+        <input type="text" name="addressFiador" id="addressFiador" class="inputs"><br>
 
-      <label for="residenciaFiador">Endereço do Fiador: </label>
-      <input type="text" name="residenciaFiador" id="residenciaFiador" class="inputs"><br>
+        <div id="nextTo">
+          <label for="numAddressFiador" class="ladinho">Numero:</label>
+          <input type="number" name="numAddressFiador" id="numAddressFiador" class="ladinho"><br>
+        
+          <label for="complementoAddressFiador" class="ladinho">Complemento:</label>
+          <input type="text" name="complementoAddressFiador" id="complementoAddressFiador" class="ladinho"><br>
 
-      <label for="numResidenciaFiador">Numero: </label>
-      <input type="number">
+          <label for="neighborhoodFiador" class="ladinho">Bairro:</label>
+          <input type="text" name="neighborhoodFiador" id="neighborhoodFiador" class="ladinho">
+        </div>
+        <div class="nextTo">
+          <label for="cepFiador" class="ladinho">cep:</label>
+          <input type="number" name="cepFiador" id="cepFiador" class="ladinho">
 
+          <label for="cityFiador" class="ladinho">Cidade:</label>
+          <input type="text" name="cityFiador" id="cityFiador" class="ladinho">
+
+          <label for="stateFiador" class="ladinho">Estado:</label>
+          <input type="text" name="stateFiador" id="stateFiador" class="ladinho">
+        </div>
+    </section>
       <label for="rendaFiador">Anexe aqui a comprovação de renda, caso queira</label>
       <input type="file" name="rendaFiador" id="rendaFiador" class="inputs">
+    </div>
+  </section>
+
+  <!--Contrato-->
+  <section>
+    <h2>Sobre o contrato</h2>
+    <label for="garantiaOpcoes">Através de qual método será feita a garantia? </label>
+    <select id="garantiaOpcoes" onChange="fiador()">
+      <option value="chequeCalcao">Cheque Calção</option>
+      <option value="seguroFiança">Seguro Fiança</option>
+      <option value="fiador">Fiador</option>
+    </select><br>
+    
+    <label for="docValidade">Até quando será valido? </label>
+    <input type="date" name="docValidade" id="docValidade" class="inputs">
+    
+    <label for="docLocal">Onde é valido?</label>
+    <input type="text" name="docLocal" id="docLocal" class="inputs">
+
+    <div>
+        <p>Qual é a data da criação do documento?</p>
+        <input type="radio" name="docdata" id="dataAtual"  value="Hoje" onclick="today()">
+        <label for="Hoje" class = "radio">Usar data atual (hoje)</label>
+        <input type="radio" name="docdata" id="outraData"  value="outraData" onclick="otherday()">
+        <label for="outraData" class = "radio">Usar outra data</label>
+    </div>
+    <div id='novaData'>
+      <input type="date" name="txtNovaData" id="txtNovaData" class="inputs">
     </div>
   </section>
 

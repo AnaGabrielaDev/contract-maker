@@ -7,7 +7,7 @@ function today(){
   const ano = data.getFullYear();
   dataAtual =  dia + "/" + mes + "/" + ano;
   //dataatual - alterar demo para o pdf depois
-  document.getElementById('demo').innerHTML = dataAtual;
+  //document.getElementById('demo').innerHTML = dataAtual;  
 }
 //outra data
 function otherday(){
@@ -26,53 +26,66 @@ function fiador (){
     document.querySelector('.showFiador').style.display = 'none';
 }
 
+
+
 //pdf
 function generatePdf() {
+
+  var metodoGarantia = document.querySelector('#garantiaOpcoes').value;
+
   //locador 
-    var nameLocador = document.querySelector('#nameLocador').value;
-    var nacionalidadeLocador = document.querySelector('#nacionalidadeLocador').value;
-    var estadocivilLocador = document.querySelector('#estadocivilLocador').value;
-    var profissaoLocador = document.querySelector('#profissaoLocador').value;
-    var rgLocador = document.querySelector('#rgLocador').value;
-    var cpfLocador = document.querySelector('#cpfLocador').value;
-    var addressLocador = document.querySelector('#addressLocador').value;
-    var numAddressLocador = document.querySelector('#numAddressLocador').value;
-    var complementoAddressLocador = document.querySelector('#complementoAddressLocador').value;
+  var nameLocador = document.querySelector('#nameLocador').value;
+  var nacionalidadeLocador = document.querySelector('#nacionalidadeLocador').value;
+  var estadocivilLocador = document.querySelector('#estadocivilLocador').value;
+  var profissaoLocador = document.querySelector('#profissaoLocador').value;
+  var rgLocador = document.querySelector('#rgLocador').value;
+  var cpfLocador = document.querySelector('#cpfLocador').value;
+  var addressLocador = document.querySelector('#addressLocador').value;
+  var numAddressLocador = document.querySelector('#numAddressLocador').value;
+  var complementoAddressLocador = document.querySelector('#complementoAddressLocador').value;
+  var neighborhoodLocador = document.querySelector('#neighborhoodLocador').value;
+  var cepLocador = document.querySelector('#cepLocador').value;
+  var cityLocador = document.querySelector('#cityLocador').value;
+  var stateLocador = document.querySelector('#stateLocador').value;
 
   //locatario
-    var nameLocatario = document.querySelector('#nameLocatario').value;
-    var nacionalidadeLocatario = document.querySelector('#nacionalidadeLocatario').value;
-    var estadocivilLocatario = document.querySelector('#estadocivilLocatario').value;
-    var profissaoLocatario = document.querySelector('#profissaoLocatario').value;
-    var rgLocatario = document.querySelector('#rgLocatario').value;
-    var cpfLocatario = document.querySelector('#cpfLocatario').value;
-    var addressLocatario = document.querySelector('#addressLocatario').value;
-    var numAddressLocatario = document.querySelector('#numAddressLocatario').value;
-    var complementoAddressLocatario = document.querySelector('#complementoAddressLocatario').value;
-    var neighborhoodLocatario = document.querySelector('#neighborhoodLocatario').value;
-    var cepLocatario = document.querySelector('#cepLocatario').value;
-    var cityLocatario = document.querySelector('#cityLocatario'),value;
-    var stateLocatario = document.querySelector('#stateLocatario').value;
+  var nameLocatario = document.querySelector('#nameLocatario').value;
+  var nacionalidadeLocatario = document.querySelector('#nacionalidadeLocatario').value;
+  var estadocivilLocatario = document.querySelector('#estadocivilLocatario').value;
+  var profissaoLocatario = document.querySelector('#profissaoLocatario').value;
+  var rgLocatario = document.querySelector('#rgLocatario').value;
+  var cpfLocatario = document.querySelector('#cpfLocatario').value;
+  var addressLocatario = document.querySelector('#addressLocatario').value;
+  var numAddressLocatario = document.querySelector('#numAddressLocatario').value;
+  var complementoAddressLocatario = document.querySelector('#complementoAddressLocatario').value;
+  var neighborhoodLocatario = document.querySelector('#neighborhoodLocatario').value;
+  var cepLocatario = document.querySelector('#cepLocatario').value;
+  var cityLocatario = document.querySelector('#cityLocatario').value;
+  var stateLocatario = document.querySelector('#stateLocatario').value;
   
   //locacao
-    var finsLocacao = document.querySelector('#finsLocacao').value;
-    var addressLocacão = document.querySelector('#addressLocacão').value;
-    var valorLocacao = document.querySelector('#valorLocacao').value;
-    var formaPagamento = document.querySelector('#formaPagamento').value;
-    var indices = document.querySelector('#indices').value;
+  var finsLocacao = document.querySelector('#finsLocacao').value;
+  var addressLocacão = document.querySelector('#addressLocacão').value;
+  var valorLocacao = document.querySelector('#valorLocacao').value;
+  var formaPagamento = document.querySelector('#formaPagamento').value;
+  var indices = document.querySelector('#indices').value;
 
   //fiador
+  if(metodoGarantia === "fiador"){
     var nameFiador = document.querySelector('#nameFiador').value;
     var nacionalidadeLocador = document.querySelector('#nacionalidadeLocador').value;
     var estadocivilFiador = document.querySelector('#estadocivilFiador').value;
     var profissaoFiador = document.querySelector('#profissaoFiador').value;
     var rgFiador = document.querySelector('#rgFiador').value;
     var cpfFiador = document.querySelector('#cpfFiador').value;
-    var residenciaFiador = document.querySelector('#residenciaFiador').value;
+    var addressFiador = document.querySelector('#addressFiador').value;
+  }
 
   //contrato
-    var docValidade = document.querySelector('#docValidade').value;
-   
+  var docValidade = document.querySelector('#docValidade').value;
+  var dataAtualSelected = document.querySelector('#dataAtual').checked;
+  var txtNovaData = document.querySelector('#txtNovaData').value;
+
   var dd = {
     content: [
       {
@@ -83,12 +96,12 @@ function generatePdf() {
         text: '\nLOCADOR:',
         style: 'subheader'
       },
-        `${nameLocador}, ${nacionalidadeLocador}, ${estadocivilLocador}, ${profissaoLocador}, portador da cédula de identidade R.G. nº ${rgLocador} e CPF nº ${cpfLocador}, residente e domiciliado à ${addressLocador}, ${numAddressLocador}, ${complementoAddressLocador}, ${neighborhoodLocatario}, ${cepLocatario}, ${cityLocatario}, ${stateLocatario}`,
+        `${nameLocador}, ${nacionalidadeLocador}, ${estadocivilLocador}, ${profissaoLocador}, portador da cédula de identidade R.G. nº ${rgLocador} e CPF nº ${cpfLocador}, residente e domiciliado à ${addressLocador}, ${numAddressLocador}, ${complementoAddressLocador}, ${neighborhoodLocador}, ${cepLocador}, ${cityLocador}, ${stateLocador}`,
       {
         text: '\nLOCATÁRIO:',
         style: 'subheader'
       }, 
-        `${nameLocatario}, ${nacionalidadeLocatario}, ${estadocivilLocatario}, ${profissaoLocatario}, portador da cédula de identidade R.G. nº ${rgLocatario} e CPF nº ${cpfLocatario}, residente e domiciliado à ${addressLocatario}, ${numAddressLocatario}, ${complementoAddressLocatario}, ${neighborhoodLocatario}`,
+        `${nameLocatario}, ${nacionalidadeLocatario}, ${estadocivilLocatario}, ${profissaoLocatario}, portador da cédula de identidade R.G. nº ${rgLocatario} e CPF nº ${cpfLocatario}, residente e domiciliado à ${addressLocatario}, ${numAddressLocatario}, ${complementoAddressLocatario}, ${neighborhoodLocatario}, ${cepLocatario}, ${cityLocatario}, ${stateLocatario}`,
       {
         //text: 'FIADOR',
         //style: 'subheader'
@@ -107,7 +120,7 @@ function generatePdf() {
         text: '\nCLÁUSULA TERCEIRA - DO PRAZO DE VIGÊNCIA',
         style: 'subheader'
       },
-        `\n3.1 O prazo da locação é de ________ meses, iniciando-se em ${dataAtual} com término em ${docValidade}, independentemente de aviso, notificação ou interpelação judicial extrajudicial. \n
+        `\n3.1 O prazo da locação é de ________ meses, iniciando-se em ${dataAtualSelected ? dataAtual : txtNovaData} com término em ${docValidade}, independentemente de aviso, notificação ou interpelação judicial extrajudicial. \n
         3.2 Findo o prazo ajustado, se o locatário continuar na posse do imóvel alugado por mais de trinta dias sem oposição do locador, presumir - se - á prorrogada a locação por prazo indeterminado, mantidas as demais cláusulas e condições do contrato.`,
       {
         text: '\nCLÁUSULA QUARTA - DA FORMA DE PAGAMENTO',
@@ -236,6 +249,17 @@ function generatePdf() {
         alignment: 'center'
       }
     } 
+  }
+
+  //Adicionar esse bloco no pdf se fiador
+  if(metodoGarantia === "fiador") {
+    const bloco = [
+      {
+      text: 'Escreva algo'
+      }
+    ];
+
+    dd.content.push(bloco);
   }
 
   pdfMake.createPdf(dd).open();

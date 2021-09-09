@@ -38,18 +38,36 @@ select {
 
 .nextTo {
     display: flex;
-}
-.ladinho{
-    margin: 12px 0;
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nextTo-item {
+    display: flex; 
+    flex-direction: column
+}
+
+.nextTo-inputs {
     padding: 7px 2px;
     box-sizing: border-box;
     border-radius: 25px;
-    float:left
-  }
+}
+
+.item {
+    padding: 7px 2px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.ladinho{
+    display: flex;
+    padding: 7px 2px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 100%;
+}
 
 footer{
     text-align: end;

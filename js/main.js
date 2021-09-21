@@ -97,7 +97,9 @@ function generatePdf() {
         style: 'subheader'
       },
         `${nameLocador}, ${nacionalidadeLocador}, ${estadocivilLocador}, ${profissaoLocador}, portador da cédula de identidade R.G. nº ${rgLocador} e CPF nº ${cpfLocador}, residente e domiciliado à ${addressLocador}, ${numAddressLocador}, ${complementoAddressLocador}, ${neighborhoodLocador}, ${cepLocador}, ${cityLocador}, ${stateLocador}`,
+        
       {
+        
         text: '\nLOCATÁRIO:',
         style: 'subheader'
       }, 
@@ -253,9 +255,9 @@ function generatePdf() {
 
   //Adicionar esse bloco no pdf se fiador
   if(metodoGarantia === "fiador") {
-    const bloco = [
+    var bloco = [
       {
-      text: 'Escreva algo'
+       text: 'Escreva algo'
       }
     ];
 

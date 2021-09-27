@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="sets/css/style.css" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <script src="js/validation.js"></script>
   <script src="js/main.js"></script>
   <script src="js/pdfmake.min.js"></script>
   <script src="js/vfs_fonts.js"></script>
@@ -22,7 +23,8 @@
       <div>
         <h2>Locador</h2>
         <label for="nameLocador"> Nome do Locador:</label>
-        <input type="text" name="nameLocador" id="nameLocador" class="inputs"><br>
+        <input type="text"  id="nameLocador" name="nameLocador" class="inputs"><br>
+        <span class="error" aria-live="polite"></span>
 
         <label for="nacionalidadeLocador">Nacionalidade: </label>
         <input type="text" name="nacionalidadeLocador" id="nacionalidadeLocador" class="inputs"><br>
@@ -315,7 +317,7 @@
         </select>
     </section>
   </form>
-  <input type="button" value="Gerar o Contrato" onclick="generatePdf()" class="inputs">
+  <input type="button" value="Gerar o Contrato" onclick="validation();generatePdf();" class="inputs">
 
   <footer>
     <a href="https://github.com/AnaGabrielaDev" target="_blank" rel="noopener noreferrer">AnaGabrielaDev</a>

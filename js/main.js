@@ -3,7 +3,7 @@ function validation() {
   var nome = document.getElementById("nameLocador");
   if (nome.value==""){
     alert("Nome do Locador nao foi informado");
-    name.focus();
+    nome.focus();
     return;
   }
 }
